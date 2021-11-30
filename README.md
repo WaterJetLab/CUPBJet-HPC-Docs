@@ -40,3 +40,6 @@ srun -t 1:00:00 -n20 -N1 -p compute --pty /bin/bash
 ```bash
 sbatch myjob.slurm
 ```
+
+## 参考材料
+https://hpc.sjtu.edu.cn/Item/docs/Pi_GetStarted.pdf
