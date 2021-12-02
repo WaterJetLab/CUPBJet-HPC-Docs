@@ -26,12 +26,17 @@ unzip ThirdParty-7-master ThirdParty-7
 cd $HOME/ThirdParty-7
 mkdir download
 wget -P download https://www.open-mpi.org/software/ompi/v2.1/downloads/openmpi-2.1.1.tar.bz2
+tar -xjf download/openmpi-2.1.1.tar.bz2
 
 #https://www.open-mpi.org/faq/?category=building
 cd openmpi-2.1.1
 mkdir build
-./configure --prefix=$HOME/ThirdParty-7/openmpi-2.1.1/build
+./configure --prefix=$HOME/openmpi-2.1.1/
 
 make all -j 10 install
 
+export OPENMPI_DIR=$HOME/openmpi-2.1.1/
+
+export PATH=\$PATH:\$OPENMPI_DIR/bin
+export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:\$OPENMPI_DIR/lib
 ```
