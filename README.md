@@ -28,7 +28,7 @@ MobaXterm 可以直接FTP连接进行下载和上传
 介绍 /share/, /share/home
 
 ## 连接外网
-terminal输入`firefox`然后任意打开网页进入石油大学网络认证窗口，输入学校密码连接
+terminal输入`firefox`然后进入石油大学网络认证窗口(`login.cup.edu.cn`)，输入学校网络认证密码连接
 
 
 ## 运行软件
