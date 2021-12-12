@@ -67,4 +67,7 @@ cd $WM_PROJECT_DIR
 ./Allwmake -j $WM_NCOMPPROCS > log.make 2>&1
 ```
 
+#------!!!Testing!!!--------
+of7
+icoFoam -help
 
