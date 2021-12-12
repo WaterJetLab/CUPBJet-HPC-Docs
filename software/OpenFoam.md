@@ -9,8 +9,10 @@ cd OpenFOAM
 git clone https://github.com/OpenFOAM/OpenFOAM-7.git
 git clone https://github.com/OpenFOAM/ThirdParty-7.git
 
-unzip OpenFOAM-7-master.zip OpenFOAM-7
-unzip ThirdParty-7-master ThirdParty-7
+unzip OpenFOAM-7-master.zip
+mv OpenFOAM-7-master OpenFOAM-7
+unzip ThirdParty-7-master.zip
+mv ThirdParty-7-master ThirdParty-7
 ```
 
 # Install compiling environment
