@@ -1,5 +1,5 @@
 
-# Download OpenFOAM7
+## Download OpenFOAM7
 ```bash
 cd $HOME
 mkdir OpenFOAM
@@ -15,7 +15,7 @@ unzip ThirdParty-7-master.zip
 mv ThirdParty-7-master ThirdParty-7
 ```
 
-# Install compiling environment
+## Install compiling environment
 ```bash
 
 #Go to $HOME/OpenFOAM/OpenFOAM-7/etc/bashrc
@@ -48,7 +48,10 @@ export OPENMPI_DIR=$HOME/openmpi-2.1.1/
 export PATH=$PATH:$OPENMPI_DIR/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$OPENMPI_DIR/lib
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$OPENMPI_DIR/lib
+```
 
+## Install OpenFoam
+```bash
 sed -i -e 's/\(boost_version=\)boost-system/\1boost_1_55_0/' OpenFOAM-7/etc/config.sh/CGAL
 sed -i -e 's/\(cgal_version=\)cgal-system/\1CGAL-4.10/' OpenFOAM-7/etc/config.sh/CGAL
 
@@ -70,4 +73,22 @@ cd $WM_PROJECT_DIR
 #------!!!Testing!!!--------
 of7
 icoFoam -help
+```
 
+## Install 3rdParty Library
+```bash
+
+#hybridPorousInterFoam
+# Donwload these from PC with VPN
+git clone https://github.com/Franjcf/hybridPorousInterFoam.git
+
+cd $HOME/OpenFOAM
+unzip hybridPorousInterFoam-master.zip
+mv hybridPorousInterFoam-master hybridPorousInterFoam
+
+cd hybridPorousInterFoam/OpenFoamV7
+
+#build hybridPorousInterFoam
+export WM_NCOMPPROCS=8
+./Allwmake -j $WM_NCOMPPROCS > log.make 2>&1
+```
