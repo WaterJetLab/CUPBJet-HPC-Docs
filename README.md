@@ -47,5 +47,10 @@ srun -t 1:00:00 -n20 -N1 -p compute --pty /bin/bash
 sbatch myjob.slurm
 ```
 
+#### 删除作业
+```bash
+scancel [JOBID]
+```
+
 ## 参考材料
 https://hpc.sjtu.edu.cn/Item/docs/Pi_GetStarted.pdf
