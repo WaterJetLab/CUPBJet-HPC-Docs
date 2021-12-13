@@ -62,7 +62,7 @@ source $HOME/OpenFOAM/OpenFOAM-7/etc/bashrc WM_COMPILER_TYPE=system WM_COMPILER=
 export WM_NCOMPPROCS=8
 
 #Then save an alias in the personal .bashrc file, simply by running the following command:
-echo "alias of7='source \$PROJECT/OpenFOAM/OpenFOAM-7/etc/bashrc $FOAM_SETTINGS'" >> $HOME/.bashrc
+echo "alias of7='source \$HOME/OpenFOAM/OpenFOAM-7/etc/bashrc $FOAM_SETTINGS'" >> $HOME/.bashrc
 
 
 #------!!!Build OpenFoam!!!--------
