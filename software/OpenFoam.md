@@ -18,11 +18,6 @@ mv ThirdParty-7-master ThirdParty-7
 ## Install compiling environment
 ```bash
 
-#Go to $HOME/OpenFOAM/OpenFOAM-7/etc/bashrc
-#Set WM_LABEL_SIZE=64 FOAMY_HEX_MESH=yes
-
-#Go to $HOME/.bashrc
-
 # Build necessary parts if not available
 
 cd $HOME/ThirdParty-7
@@ -56,7 +51,7 @@ sed -i -e 's/\(boost_version=\)boost-system/\1boost_1_55_0/' OpenFOAM-7/etc/conf
 sed -i -e 's/\(cgal_version=\)cgal-system/\1CGAL-4.10/' OpenFOAM-7/etc/config.sh/CGAL
 
 #Setup building parameters
-source $HOME/OpenFOAM/OpenFOAM-7/etc/bashrc WM_COMPILER_TYPE=system WM_COMPILER=Gcc48 WM_LABEL_SIZE=64 WM_MPLIB=OPENMPI FOAMY_HEX_MESH=
+source $HOME/OpenFOAM/OpenFOAM-7/etc/bashrc WM_COMPILER_TYPE=system WM_COMPILER=Gcc48 WM_LABEL_SIZE=64 WM_MPLIB=OPENMPI FOAMY_HEX_MESH=no
 
 #For faster compile using 16 cores in SuperMike II
 export WM_NCOMPPROCS=8
