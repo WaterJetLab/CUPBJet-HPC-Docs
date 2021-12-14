@@ -67,6 +67,17 @@ cd $WM_PROJECT_DIR
 #------!!!Testing!!!--------
 of7
 icoFoam -help
+
+#------Env setup-----
+
+#Add following script into #HOME/.bashrc
+
+#OpenMPI
+export OPENMPI_DIR=$HOME/OpenFOAM/ThirdParty-7/platforms/linux64Gcc48/openmpi-2.1.1
+export PATH=$PATH:$OPENMPI_DIR/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$OPENMPI_DIR/lib64
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$OPENMPI_DIR/lib64
+
 ```
 
 ## Install 3rdParty Library
