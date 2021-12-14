@@ -42,7 +42,6 @@ export OPENMPI_DIR=$HOME/openmpi-2.1.1/
 
 export PATH=$PATH:$OPENMPI_DIR/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$OPENMPI_DIR/lib
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$OPENMPI_DIR/lib
 ```
 
 ## Install OpenFoam
