@@ -7,8 +7,8 @@ Jet集群自 2021 年底建成，拥有 8 台计算节点和 16 颗第二代英�
 | ----- | ----- |----- |----- |----- |----- |
 | login   | Intel Xeon Silver 4210R (2.4GHz 10C) * 2     | -  |128 GB  | 1  |ln01|
 | compute | Intel Xeon Gold 5218R (2.1GHz 20C) * 2 | -  |384 GB  | 8  |n01-n08|
-| gpu     | Intel Xeon Gold 5218R (2.1GHz 20C) * 2 | NVIDIA Tesla T4 (2560C 16GB) * 8  | 256 GB  | 1  |g01 |
-| gpu     | Intel Xeon Gold 4214R   (2.4GHz 12C) * 2 | NVIDIA Tesla V100 (5120C TC640 32GB) * 2  | 256 GB  | 1  |g02|
+| gpu     | Intel Xeon Gold 4214R   (2.4GHz 12C) * 2 | NVIDIA Tesla V100 (5120C TC640 32GB) * 2  | 256 GB  | 1  |g01|
+| gpu     | Intel Xeon Gold 5218R (2.1GHz 20C) * 2 | NVIDIA Tesla T4 (2560C 16GB) * 8  | 256 GB  | 1  |g02 |
 | all     | -  |-  |-  |-  |-|
 
 
