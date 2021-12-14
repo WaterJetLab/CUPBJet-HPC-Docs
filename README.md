@@ -39,7 +39,10 @@ terminal输入`firefox`然后进入石油大学网络认证窗口(`login.cup.edu
 
 #### 交互模式
 ```bash
+#单节点 20核心
 srun -t 1:00:00 -n20 -N1 -p compute --pty /bin/bash
+#双节点 80核心
+srun -t 1:00:00 -n80 -N2 -p all --pty /bin/bash
 ```
 
 #### 批量模式
