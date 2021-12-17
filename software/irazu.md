@@ -109,6 +109,8 @@ cd   gcc-7.3.0_build
 make -j 10
 make -j 10   install
 
+#Install/Activate gcc
+export LD_LIBRARY_PATH=/share/soft/gcc-7.3.0/lib64:${LD_LIBRARY_PATH}
 
 
 ```
