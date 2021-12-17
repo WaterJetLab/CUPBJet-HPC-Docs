@@ -93,24 +93,28 @@ yum localinstall python2-dnf-4.0.9.2-2.el7_9.noarch.rpm
 yum localinstall dnf-4.0.9.2-2.el7_9.noarch.rpm
 ```
 
-### Install gcc7.3
+### Install gcc
 ```bash
 #https://bbs.huaweicloud.com/forum/thread-40450-1-1.html
 
-wget https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc/gcc-7.3.0/gcc-7.3.0.tar.gz --no-check-certificate
-tar -xf gcc-7.3.0.tar.gz
-cd gcc-7.3.0
+GCC_VERSION=9.2.0
+cd /share/soft/gcc
+wget https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc/gcc-${GCC_VERSION}/gcc-${GCC_VERSION}.tar.gz --no-check-certificate
+
+tar -xf gcc-${GCC_VERSION}.tar.gz
+cd gcc-${GCC_VERSION}
 ./contrib/download_prerequisites
 
-mkdir gcc-7.3.0_build
-cd   gcc-7.3.0_build
+mkdir gcc-${GCC_VERSION}_build
+cd   gcc-${GCC_VERSION}_build
 
-../configure --prefix=/share/soft/gcc-7.3.0 --disable-multilib
-make -j 10
-make -j 10   install
+../configure --prefix=/share/soft/gcc-${GCC_VERSION} --disable-multilib --enable-languages=c,c++
+make -j 20
+make -j 20   install
 
 #Install/Activate gcc
-export LD_LIBRARY_PATH=/share/soft/gcc-7.3.0/lib64:${LD_LIBRARY_PATH}
+GCC_VERSION=9.2.0
+export LD_LIBRARY_PATH=/share/soft/gcc-${GCC_VERSION}/lib64:${LD_LIBRARY_PATH}
 
 
 ```
