@@ -1,6 +1,6 @@
 
 
-
+#rt pass Passw0rd@123pg
 ## Setup user environment in g02
 ```bash
 #Install libxml2
@@ -115,15 +115,13 @@ export LD_LIBRARY_PATH=/share/soft/gcc-${GCC_VERSION}/lib64:${LD_LIBRARY_PATH}
 
 ```
 
-### Install localdef
+### Install qt5
 ```bash
-yumdownloader glibc-common
-yumdownloader glibc-common-2.17-317.el7
+yumdownloader qt5-*-devel
+yumdownloader qt5-qt3d
 
 ssh g02
-cd /share/src/
-yum localinstall glibc-common-2.17-317.el7.x86_64.rpm
-yum localinstall glibc-common-2.17-325.el7_9.x86_64.rpm
+cd /share/src/qt5
+yum localinstall qt5-*-devel
 
-yum reinstall glibc-common
 ```
