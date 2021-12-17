@@ -3,10 +3,6 @@
 
 ## Setup user environment in g02
 ```bash
-
-export PATH=$PATH:/share/lib-common/usr/bin
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/share/lib-common/usr/lib64
-
 #Install libxml2
 cd /share/src/
 yumdownloader libxml2
@@ -117,4 +113,17 @@ GCC_VERSION=9.2.0
 export LD_LIBRARY_PATH=/share/soft/gcc-${GCC_VERSION}/lib64:${LD_LIBRARY_PATH}
 
 
+```
+
+### Install localdef
+```bash
+yumdownloader glibc-common
+yumdownloader glibc-common-2.17-317.el7
+
+ssh g02
+cd /share/src/
+yum localinstall glibc-common-2.17-317.el7.x86_64.rpm
+yum localinstall glibc-common-2.17-325.el7_9.x86_64.rpm
+
+yum reinstall glibc-common
 ```
