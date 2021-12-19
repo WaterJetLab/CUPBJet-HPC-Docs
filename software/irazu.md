@@ -156,7 +156,7 @@ yum localinstall -y nvidia-*.rpm kmod-nvidia-*.rpm
 
 #CUDA
 yumdownloader cuda cuda-11-5 cuda-*-11-5 *-11-5 cuda-toolkit-*-common
-yumdownloader nsight-*
+yumdownloader nsight-systems nsight-compute-2021.3.1 nvidia-fs
 yumdownloader cuda cuda-11-5 cuda-*-11-5 *-11-5 cuda-toolkit-*-common
 
 yumdownloader nvidia-libXNVCtrl-devel nvidia-settings nvidia-libXNVCtrl 
