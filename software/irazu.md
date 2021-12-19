@@ -156,7 +156,8 @@ yum localinstall -y nvidia-*.rpm kmod-nvidia-*.rpm
 
 #CUDA
 yumdownloader cuda cuda-11-5 cuda-*-11-5 *-11-5 cuda-toolkit-*-common
-yumdownloader nsight-systems nsight-compute-2021.3.1 nvidia-fs
+yumdownloader nsight-systems nsight-compute-2021.3.1
+yumdownloader nvidia-fs nvidia-fs-dkms
 yumdownloader cuda cuda-11-5 cuda-*-11-5 *-11-5 cuda-toolkit-*-common
 
 yumdownloader nvidia-libXNVCtrl-devel nvidia-settings nvidia-libXNVCtrl 
@@ -165,7 +166,7 @@ yumdownloader nvidia-libXNVCtrl-devel nvidia-settings nvidia-libXNVCtrl
 ssh g01
 cd /share/src/irazu_deps/
 yum localinstall -y cuda-*.rpm *-11-5*.rpm nvidia-*.rpm 
-yum localinstall -y *-11-5*.rpm cuda-*.rpm nvidia-*.rpm 
+yum localinstall -y *-11-5*.rpm cuda-*.rpm nvidia-*.rpm nsight-*.rpm
 
 nvidia-smi | grep NVIDIA
 ```
@@ -183,6 +184,10 @@ export PATH=$PATH:/opt/Irazu/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/Irazu/lib:/usr/local/lib:/usr/lib:/usr/local/lib64:/usr/lib64
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu/:/usr/local/lib:/usr/lib:/usr/local/lib64:/usr/lib64
 export IRAZU_LICENSE_PATH=/opt/Irazu/license
+
+#Testing
+
+
 ```
 
 
