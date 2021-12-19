@@ -137,8 +137,8 @@ yum localinstall dnf-4.0.9.2-2.el7_9.noarch.rpm
 
 #### Install NVIDIA driver
 ```bash
-yum localinstall cuda-repo-rhel7-11-2-local-11.2.2_460.32.03-1.x86_64.rpm
-yum localinstall nvidia-driver-local-repo-rhel7-460.32.03-1.0-1.x86_64.rpm
+
+#Driver
 yum localinstall dkms-2.8.4-1.el7.noarch.rpm
 
 distribution=rhel7
@@ -152,10 +152,22 @@ yumdownloader kmod-nvidia-latest-dkms nvidia-persistenced-latest-dkms
 
 ssh g01
 cd /share/src/irazu_deps/
-
 yum localinstall -y nvidia-*.rpm kmod-nvidia-*.rpm
 
-nvidia-smi| grep NVIDIA
+#CUDA
+yumdownloader cuda cuda-11-5 cuda-*-11-5 *-11-5 cuda-toolkit-*-common
+yumdownloader nsight-*
+yumdownloader cuda cuda-11-5 cuda-*-11-5 *-11-5 cuda-toolkit-*-common
+
+yumdownloader nvidia-libXNVCtrl-devel nvidia-settings nvidia-libXNVCtrl 
+
+
+ssh g01
+cd /share/src/irazu_deps/
+yum localinstall -y cuda-*.rpm *-11-5*.rpm nvidia-*.rpm 
+yum localinstall -y *-11-5*.rpm cuda-*.rpm nvidia-*.rpm 
+
+nvidia-smi | grep NVIDIA
 ```
 
 #### Install Irazu
