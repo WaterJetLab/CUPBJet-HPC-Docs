@@ -106,9 +106,9 @@ export LD_LIBRARY_PATH=/share/soft/gcc-${GCC_VERSION}/lib64:${LD_LIBRARY_PATH}
 #### Install dnf
 ```bash
 #Download dnf from ln01 with internet access
-cd /share/src/
+cd /share/src/dnf
 yumdownloader epel-release
-lyumdownloader dnf
+yumdownloader dnf
 yumdownloader dnf-data
 yumdownloader libreport-filesystem
 yumdownloader libmodulemd
@@ -121,18 +121,9 @@ yumdownloader python2-libdnf
 
 #install dnf from g02 locally without internet access
 ssh g01
-cd /share/src/
-yum localinstall epel-release-7-14.noarch.rpm
-yum localinstall libreport-filesystem-2.1.11-53.el7.centos.x86_64.rpm
-yum localinstall dnf-data-4.0.9.2-2.el7_9.noarch.rpm
-yum localinstall libyaml-0.1.4-11.el7_0.x86_64.rpm
-yum localinstall libmodulemd-1.6.3-1.el7.x86_64.rpm
-yum localinstall libsolv-0.6.34-4.el7.x86_64.rpm 
-yum localinstall librepo-1.8.1-8.el7_9.x86_64.rpm
-yum localinstall libdnf-0.22.5-2.el7_9.x86_64.rpm
-yum localinstall python2-hawkey-0.22.5-2.el7_9.x86_64.rpm
-yum localinstall python2-dnf-4.0.9.2-2.el7_9.noarch.rpm
-yum localinstall dnf-4.0.9.2-2.el7_9.noarch.rpm
+cd /share/src/dnf
+rm -f *i686.rpm
+yum localinstall *.rpm
 ```
 
 #### Install NVIDIA driver
