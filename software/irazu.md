@@ -170,15 +170,15 @@ cd /share/soft/irazu/install
 #Obtain license files
 ./pshostid
 
-#Setup Irazu environment
-export PATH=$PATH:/opt/Irazu/bin
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/Irazu/lib:/usr/local/lib:/usr/lib:/usr/local/lib64:/usr/lib64
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu/:/usr/local/lib:/usr/lib:/usr/local/lib64:/usr/lib64
-export IRAZU_LICENSE_PATH=/opt/Irazu/license
+#Setup Irazu License
+export IRAZU_LICENSE_PATH=/share/home/wangbin/irazu_lic/
 
 #Testing
+GCC_VERSION=9.2.0
+export LD_LIBRARY_PATH=/share/soft/gcc-${GCC_VERSION}/lib64:${LD_LIBRARY_PATH}
 
 
+irazu_2d --in /share/home/wangbin/test_irazu/UCS_tutorial_femdem.r2m --out /share/home/wangbin/test_irazu/output
 ```
 
 
