@@ -40,4 +40,11 @@ required to run yum. The error leading to this problem was:
 * 登录mysql。如果已经启动mysql则可直接登录，如未启动则需先启动。`mysql –u name –p password`.
 * 更改mysql密码。密码可在登录近mysql之后更改。需要输入命令 `ALTER USER ‘username’ @ ‘locahost’ IDENTIFIED BY ‘new password’`。
 
+#### 子节点网络连接和关闭
+
+网线从顶部接口连接任一想要联网节点，目前只有root和g01插了网线
+* 查看IP地址和网卡名 `ip addr show`
+* 禁用某一网卡 `ifdown em1`
+* 开启某一网卡并配置ip地址 `ifup em1`
+
 Mysql用户root，密码”Passw0rd123.”
