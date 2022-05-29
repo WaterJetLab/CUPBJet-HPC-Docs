@@ -171,7 +171,7 @@ cd /share/soft/irazu/install
 ./pshostid
 
 #Setup Irazu License
-export IRAZU_LICENSE_PATH=/share/home/wangbin/irazu_lic/
+export IRAZU_LICENSE_PATH=/share/soft/irazu/install_g01/license/
 
 #Testing
 GCC_VERSION=9.2.0
