@@ -8,9 +8,8 @@
 #2、进入g01 节点,软件安装在g01节点，只能在这个上面计算
 ssh g01
 
-#3、安装license
-export IRAZU_LICENSE_PATH=/share/home/chenjx/irazu_lic/
-#运行时对应修改自己的用户名，如：export IRAZU_LICENSE_PATH=/share/home/XXX/irazu_lic/
+#3、设置license
+export IRAZU_LICENSE_PATH=//share/soft/irazu/install_g01/license/
 
 #4、安装GCC环境，这步不用修改
 GCC_VERSION=9.2.0
