@@ -9,7 +9,7 @@
 ssh g01
 
 #3、设置license
-export IRAZU_LICENSE_PATH=//share/soft/irazu/install_g01/license/
+export IRAZU_LICENSE_PATH=/share/soft/irazu/install_g01/license/
 
 #4、安装GCC环境，这步不用修改
 GCC_VERSION=9.2.0
