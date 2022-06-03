@@ -13,6 +13,9 @@ export LD_LIBRARY_PATH=/share/soft/gcc-${GCC_VERSION}/lib64:${LD_LIBRARY_PATH}
 #3、运行irazu进行计算
 irazu_user_interface
 
+license路径
+/share/soft/irazu/install_g01/license/CUP-cluster-2022.clic
+
 #4、建模完成后，Export文件格式为 (.r3m)，将两个文件上传到超算自己对应的文件夹
 ```
 
