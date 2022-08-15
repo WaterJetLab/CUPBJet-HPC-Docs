@@ -181,6 +181,23 @@ export LD_LIBRARY_PATH=/share/soft/gcc-${GCC_VERSION}/lib64:${LD_LIBRARY_PATH}
 irazu_2d --in /share/home/wangbin/test_irazu/UCS_tutorial_femdem.r2m --out /share/home/wangbin/test_irazu/output
 ```
 
+#### Activate Irazu on g01
+```bash
+cd /share/soft/irazu/install_g01/
+
+#make sure em1 of ethernet on g01 is connnected
+ip addr show
+ifdown em1
+ifup em1
+
+#check activation code based on 
+./pshostid
+'pshostid for lin64: 2cea7feaf8a8'
+
+#create support file
+irazu_2d --license-support
+```
+
 
 
 #rt pass Passw0rd@123pg
