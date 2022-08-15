@@ -185,6 +185,11 @@ irazu_2d --in /share/home/wangbin/test_irazu/UCS_tutorial_femdem.r2m --out /shar
 ```bash
 cd /share/soft/irazu/install_g01/
 
+#copy license files to IRAZU_LICENSE_PATH
+export IRAZU_LICENSE_PATH=/share/soft/irazu/install_g01/license/
+-CUP-cluster-2022.clic
+-CUP-Sheng-engine-2022b.lic
+
 #make sure em1 of ethernet on g01 is connnected
 ip addr show
 ifdown em1
@@ -200,6 +205,7 @@ irazu_2d --license-support
 #change permission for all
 chmod +x CUP-Sheng-engine-2022b.lic
 chmod +x CUP-cluster-2022.clic
+chmod +x $IRAZU_LICENSE_PATH
 ```
 
 
