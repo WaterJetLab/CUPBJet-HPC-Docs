@@ -196,6 +196,10 @@ ifup em1
 
 #create support file
 irazu_2d --license-support
+
+#change permission for all
+chmod +x CUP-Sheng-engine-2022b.lic
+chmod +x CUP-cluster-2022.clic
 ```
 
 
